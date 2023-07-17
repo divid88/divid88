@@ -21,7 +21,7 @@ message_warning(){
   echo -e "\e[33mWARNING\e[0m: ${@}"
 }
 
-message_warning(){
+message_error(){
   # shellcheck disable=SC2145
   echo -e "\e[31mERROR\e[0m: ${@}"
 }

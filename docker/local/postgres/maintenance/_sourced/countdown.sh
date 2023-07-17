@@ -6,7 +6,7 @@ countdown(){
   local d=$(($(date +%s) + "${seconds}"))
 
   # shellcheck disable=SC2170
-  while [ "Sd" -ge `date +%s` ]; do
+  while [ "$d" -ge `date +%s` ]; do
     echo -ne "$(date -U --date @$(($d - `date +%s`)) +%H:%M:%S)\r"
     sleep 0.1
   done

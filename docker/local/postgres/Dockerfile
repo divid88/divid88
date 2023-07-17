@@ -1,4 +1,4 @@
-FROM postgres:latest
+FROM postgres:15.3
 
 COPY ./docker/local/postgres/maintenance /usr/local/bin/maintenance
 

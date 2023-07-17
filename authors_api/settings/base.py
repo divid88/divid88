@@ -77,8 +77,21 @@ WSGI_APPLICATION = 'authors_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {"default": env.db("DATABASE_URL")}
-DATABASES["default"]["ATOMIC_REQUESTS"] = True
+# DATABASES = {"default": env.db("DATABASE_URL")}
+# DATABASES["default"]["ATOMIC_REQUESTS"] = True
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'authors',
+        'USER': 'sajadwork',
+        'PASSWORD': '#S1A3J7A6D*work$',
+        'HOST': 'postgres',
+        'PORT': '5433'
+    }
+}
+
+
 
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.Argon2PasswordHasher",
